@@ -4,7 +4,6 @@ const nextConfig = {
         return [
             {
                 // matching all API routes
-                source: "/api/:path*",
                 source: 'https://dev.obtenmas.com/catom/api/challenge/banks',
                 headers: [
                     { key: "Access-Control-Allow-Credentials", value: "true" },
