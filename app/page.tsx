@@ -13,7 +13,9 @@ export default function Home() {
         method: 'GET',
         mode: 'no-cors',
         headers: {
-          'Access-Control-Allow-Origin': '*'
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Credentials" : 'false',
+          "Content-Type": "application/json"
         }
       });
       const respuesta = await response.json();
