@@ -9,7 +9,12 @@ export default function Home() {
   useEffect(() => {
     const consultarAPI = async() => {
       const url = 'https://dev.obtenmas.com/catom/api/challenge/banks';
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        'mode': 'cors',
+        'headers': {
+        'Access-Control-Allow-Origin': '*',
+        }
+      });
       const respuesta = await response.json();
       respuesta.sort((a:any, b:any) => a.bankName !== b.bankName ? a.bankName < b.bankName ? -1 : 1 : 0);
       localStorage.setItem('listaBancos', JSON.stringify(respuesta));
