@@ -13,7 +13,6 @@ export default function Home() {
         method: 'GET',
         mode: 'no-cors',
         headers: {
-          'Content-type': 'application/json',
           'Access-Control-Allow-Origin': '*'
         }
       });
