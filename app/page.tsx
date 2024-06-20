@@ -10,10 +10,11 @@ export default function Home() {
     const consultarAPI = async() => {
       const url = 'https://dev.obtenmas.com/catom/api/challenge/banks';
       const response = await fetch(url, {
-        mode: 'cors',
+        method: 'GET',
+        mode: 'no-cors',
         headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+          'Content-type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
         }
       });
       const respuesta = await response.json();
